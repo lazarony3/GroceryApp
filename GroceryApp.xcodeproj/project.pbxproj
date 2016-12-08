@@ -13,8 +13,6 @@
 		2D8E82ED1DEB6CDB00A699BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8E82EB1DEB6CDB00A699BE /* LaunchScreen.storyboard */; };
 		2D8E82F81DEB6CDB00A699BE /* GroceryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8E82F71DEB6CDB00A699BE /* GroceryAppTests.swift */; };
 		2D8E83031DEB6CDB00A699BE /* GroceryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8E83021DEB6CDB00A699BE /* GroceryAppUITests.swift */; };
-		2D8E83141DEB7ADD00A699BE /* MyData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8E83131DEB7ADD00A699BE /* MyData+CoreDataClass.swift */; };
-		2D8E83161DEB7B1A00A699BE /* MyData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8E83151DEB7B1A00A699BE /* MyData+CoreDataProperties.swift */; };
 		2D8E831C1DEB8BA200A699BE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8E831B1DEB8BA200A699BE /* DataManager.swift */; };
 		2D8E83211DEB8CD400A699BE /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8E83201DEB8CD400A699BE /* UIViewController+Extension.swift */; };
 		2D8E83231DEB8CFB00A699BE /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8E83221DEB8CFB00A699BE /* Array+Extension.swift */; };
@@ -24,8 +22,10 @@
 		2D8E832C1DEB8D8800A699BE /* AddDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8E832B1DEB8D8800A699BE /* AddDataViewController.swift */; };
 		2D8E832E1DEB8D9500A699BE /* DataDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8E832D1DEB8D9500A699BE /* DataDetailViewController.swift */; };
 		2D8E83311DEBA29100A699BE /* GroceryAppTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D8E832F1DEBA29100A699BE /* GroceryAppTestModel.xcdatamodeld */; };
-		2D8E83331DEBCCB000A699BE /* Collection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8E83321DEBCCB000A699BE /* Collection+CoreDataClass.swift */; };
-		2D8E83351DEBCD7200A699BE /* Collection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8E83341DEBCD7200A699BE /* Collection+CoreDataProperties.swift */; };
+		2DD049C31DF63EBF00FF659D /* GroceryList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD049BF1DF63EBF00FF659D /* GroceryList+CoreDataClass.swift */; };
+		2DD049C41DF63EBF00FF659D /* GroceryList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD049C01DF63EBF00FF659D /* GroceryList+CoreDataProperties.swift */; };
+		2DD049C51DF63EBF00FF659D /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD049C11DF63EBF00FF659D /* Item+CoreDataClass.swift */; };
+		2DD049C61DF63EBF00FF659D /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD049C21DF63EBF00FF659D /* Item+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +58,6 @@
 		2D8E82FE1DEB6CDB00A699BE /* GroceryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D8E83021DEB6CDB00A699BE /* GroceryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryAppUITests.swift; sourceTree = "<group>"; };
 		2D8E83041DEB6CDB00A699BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D8E83131DEB7ADD00A699BE /* MyData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyData+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2D8E83151DEB7B1A00A699BE /* MyData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D8E831B1DEB8BA200A699BE /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		2D8E83201DEB8CD400A699BE /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		2D8E83221DEB8CFB00A699BE /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
@@ -69,8 +67,10 @@
 		2D8E832B1DEB8D8800A699BE /* AddDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDataViewController.swift; sourceTree = "<group>"; };
 		2D8E832D1DEB8D9500A699BE /* DataDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDetailViewController.swift; sourceTree = "<group>"; };
 		2D8E83301DEBA29100A699BE /* GroceryAppTestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GroceryAppTestModel.xcdatamodel; sourceTree = "<group>"; };
-		2D8E83321DEBCCB000A699BE /* Collection+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2D8E83341DEBCD7200A699BE /* Collection+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2DD049BF1DF63EBF00FF659D /* GroceryList+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GroceryList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2DD049C01DF63EBF00FF659D /* GroceryList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GroceryList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2DD049C11DF63EBF00FF659D /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2DD049C21DF63EBF00FF659D /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,11 +155,11 @@
 		2D8E83121DEB7A9D00A699BE /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				2D8E83131DEB7ADD00A699BE /* MyData+CoreDataClass.swift */,
-				2D8E83151DEB7B1A00A699BE /* MyData+CoreDataProperties.swift */,
+				2DD049BF1DF63EBF00FF659D /* GroceryList+CoreDataClass.swift */,
+				2DD049C01DF63EBF00FF659D /* GroceryList+CoreDataProperties.swift */,
+				2DD049C11DF63EBF00FF659D /* Item+CoreDataClass.swift */,
+				2DD049C21DF63EBF00FF659D /* Item+CoreDataProperties.swift */,
 				2D8E831B1DEB8BA200A699BE /* DataManager.swift */,
-				2D8E83321DEBCCB000A699BE /* Collection+CoreDataClass.swift */,
-				2D8E83341DEBCD7200A699BE /* Collection+CoreDataProperties.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -319,20 +319,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD049C61DF63EBF00FF659D /* Item+CoreDataProperties.swift in Sources */,
 				2D8E832E1DEB8D9500A699BE /* DataDetailViewController.swift in Sources */,
+				2DD049C41DF63EBF00FF659D /* GroceryList+CoreDataProperties.swift in Sources */,
 				2D8E83261DEB8D5500A699BE /* CollectionViewController.swift in Sources */,
 				2D8E83211DEB8CD400A699BE /* UIViewController+Extension.swift in Sources */,
+				2DD049C51DF63EBF00FF659D /* Item+CoreDataClass.swift in Sources */,
 				2D8E83281DEB8D6300A699BE /* AddCollectionViewController.swift in Sources */,
 				2D8E83311DEBA29100A699BE /* GroceryAppTestModel.xcdatamodeld in Sources */,
 				2D8E832C1DEB8D8800A699BE /* AddDataViewController.swift in Sources */,
 				2D8E831C1DEB8BA200A699BE /* DataManager.swift in Sources */,
-				2D8E83351DEBCD7200A699BE /* Collection+CoreDataProperties.swift in Sources */,
 				2D8E83231DEB8CFB00A699BE /* Array+Extension.swift in Sources */,
-				2D8E83141DEB7ADD00A699BE /* MyData+CoreDataClass.swift in Sources */,
-				2D8E83161DEB7B1A00A699BE /* MyData+CoreDataProperties.swift in Sources */,
 				2D8E82E31DEB6CDB00A699BE /* AppDelegate.swift in Sources */,
 				2D8E832A1DEB8D7900A699BE /* DataViewController.swift in Sources */,
-				2D8E83331DEBCCB000A699BE /* Collection+CoreDataClass.swift in Sources */,
+				2DD049C31DF63EBF00FF659D /* GroceryList+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +577,7 @@
 				2D8E83091DEB6CDB00A699BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D8E830A1DEB6CDB00A699BE /* Build configuration list for PBXNativeTarget "GroceryAppTests" */ = {
 			isa = XCConfigurationList;
@@ -585,6 +586,7 @@
 				2D8E830C1DEB6CDB00A699BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D8E830D1DEB6CDB00A699BE /* Build configuration list for PBXNativeTarget "GroceryAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -593,6 +595,7 @@
 				2D8E830F1DEB6CDB00A699BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

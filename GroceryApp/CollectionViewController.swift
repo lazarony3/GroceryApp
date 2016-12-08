@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SelectedItemRowContainer {
+    var selectedItemIndex: Int? { get set }
+}
+
 class CollectionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var collectionTableView: UITableView?
@@ -37,5 +41,15 @@ class CollectionViewController: UIViewController, UITableViewDataSource, UITable
         tableView.deselectRow(at: indexPath, animated: UIView.areAnimationsEnabled)
         
         manager.selectedCollectionIndex = indexPath.row
+    }
+    
+    // MARK: - Prepare for Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        if var destination = segue.destination as? SelectedItemRowContainer {
+            destination.selectedItemIndex = collectionTableView?.indexPathForSelectedRow?.row
+        }
     }
 }

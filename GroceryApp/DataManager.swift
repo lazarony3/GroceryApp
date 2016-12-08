@@ -17,12 +17,12 @@ class DataManager {
     static var shared: DataManager = DataManager()
     
     var managedObjectContext: NSManagedObjectContext?
-    var collections: [Collection]
+    var collections: [GroceryList]
     var collectionCount: Int {
         return collections.count
     }
     
-    var myData: [MyData]
+    var myData: [Item]
     var myDataCount: Int {
         return myData.count
     }
@@ -48,11 +48,11 @@ extension DataManager {
         guard let ctx = managedObjectContext else {
             throw DataError.BadManagedObjectContext("The Managed object was nil")
         }
-        guard let entity = NSEntityDescription.entity(forEntityName: "Collection", in: ctx) else {
+        guard let entity = NSEntityDescription.entity(forEntityName: "GroceryList", in: ctx) else {
             throw DataError.BadEntity("The entity was bad")
         }
         
-        let obj = Collection(entity: entity, insertInto: ctx)
+        let obj = GroceryList(entity: entity, insertInto: ctx)
         obj.name = name
         
         try? save()
@@ -66,8 +66,8 @@ extension DataManager {
 extension DataManager {
     func loadMyData() {
         let selectedCollection = collections.value(at: selectedCollectionIndex)
-        myData = selectedCollection?.groceryList?.flatMap { item in
-            return item as? MyData
+        myData = selectedCollection?.groceryItems?.flatMap { item in
+            return item as? Item
         } ?? []
     }
     
@@ -75,10 +75,10 @@ extension DataManager {
         guard let ctx = managedObjectContext else {
             throw DataError.BadManagedObjectContext("The Managed object was nil")
         }
-        guard let entity = NSEntityDescription.entity(forEntityName: "Collection", in: ctx) else {
+        guard let entity = NSEntityDescription.entity(forEntityName: "Item", in: ctx) else {
             throw DataError.BadEntity("The entity was bad")
         }
-        let obj = MyData(entity:entity, insertInto: ctx)
+        let obj = Item(entity:entity, insertInto: ctx)
         obj.name = data.name!
         obj.quantity = Int16(data.quantity)
         

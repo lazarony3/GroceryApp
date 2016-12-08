@@ -8,10 +8,20 @@
 
 import UIKit
 
-class DataViewController: UIViewController {
+class DataViewController: UIViewController , UITableViewDataSource, UITableViewDelegate, SelectedItemRowContainer {
+    
+    @IBOutlet weak var dataTableView: UITableView!
+    var selectedItemIndex: Int?
+    
+    let manager = DataManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        manager.selectedMyDataIndex = selectedItemIndex!
+        
+        manager.loadMyData()
+        dataTableView?.reloadData()
 
         // Do any additional setup after loading the view.
     }
@@ -20,6 +30,27 @@ class DataViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return manager.collectionCount
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Item", for: indexPath)
+        let item = manager.getMyData(from: indexPath)
+        
+        cell.textLabel?.text = item?.name
+        cell.detailTextLabel?.text = String(item?.quantity)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: UIView.areAnimationsEnabled)
+        
+        manager.selectedCollectionIndex = indexPath.row
+    }
+
     
 
     /*
